@@ -1,0 +1,26 @@
+{
+  "name": "webpack-5-wasm-reftypes",
+  "collaborators": [
+    "Mario Reder <mario.reder@maibornwolff.de>"
+  ],
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tarnadas/webpack-5-wasm-reftypes"
+  },
+  "scripts": {
+    "build": "yarn build:wasm && yarn build:js",
+    "build:wasm": "wasm-pack build . --release --out-dir pkg --target bundler --reference-types",
+    "build:js": "webpack --mode production"
+  },
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
